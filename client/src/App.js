@@ -1,14 +1,18 @@
 
 import './App.css';
 import { Router } from '@reach/router'
-import Form from './components/Form';
+import Detail from './views/Detail';
+import View from './views/View'
 
 
 function App() {
   return (
-    <Router>
-      <Form path="/new" />
-    </Router>
+    <div className="wrapper">
+      <Router>
+        <View path="/products" />
+        <Detail path="/products/:id" />
+      </Router>
+    </div>
   );
 }
 
